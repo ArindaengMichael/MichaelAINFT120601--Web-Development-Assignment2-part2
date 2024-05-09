@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.3/classic/ckeditor.js"></script>
-    <title>test</title>
+    <title>MBA@UNC Electives</title>
+    <style>
+        /* Center the page */
+        body {
+            
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+    </style>
+    <!-- Include CKEditor JavaScript -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
 </head>
-    <!-- Initialize CKEditor -->
-    <script>
-        ClassicEditor
-            .create(document.querySelector('#editor'))
-            .then(editor => {
-                console.log('Editor was initialized', editor);
-            })
-            .catch(error => {
-                console.error(error);
-            });
-    </script>
 <body>
+
     <div class="enhanceable_content tabs">
         <div id="2">
             <div style="display: flex; text-align: center; margin-top: 10px;">
@@ -30,6 +28,7 @@
             <hr />
             <p><span style="font-size: 12pt;">On a space-available basis, EMBA students may take MBA@UNC elective courses at no additional cost.</span></p>
             <p><span style="font-size: 12pt;">The MBA@UNC Program operates on a quarter system with courses comprised of asynchronous videos and synchronous in-person sessions online. Use the filters below to view online elective offerings and course descriptions in <span style="color: #3366ff;"><a class="inline_disabled" style="color: #3366ff;" href="https://a.kenan-flagler.unc.edu/applications/Students/Registration.aspx" target="_blank" rel="noopener">MyKE</a></span>.</span></p>
+            <textarea id="editor"></textarea> <!-- Move this around to move the edtor box -->
             <table style="border-collapse: collapse; width: 97.6866%; height: 93px;" border="1">
                 <tbody>
                     <tr style="height: 10px;">
@@ -176,9 +175,18 @@
         <p class="Button Button--small" style="background-color: #4b9cd3; color: #0064a4; width: 100%; vertical-align: middle; margin: 150px px; padding: 10px 0px;"><a title="Welcome to Your Charlotte EMBA Student Resource Site!" href="https://kenan-flagler.instructure.com/courses/3789479/modules/9569458" data-course-type="modules" data-published="true" data-api-endpoint="https://kenan-flagler.instructure.com/api/v1/courses/3789479/modules/9569458" data-api-returntype="Module"><span style="color: #ecf0f1;">Return to Module</span></a></p>
     </div>
 
-  
-    
-    
-    
+
+    <!-- Initialize CKEditor -->
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .then(editor => {
+                console.log('Editor was initialized', editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
 </body>
 </html>
+
